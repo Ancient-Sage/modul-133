@@ -14,6 +14,33 @@ console.log(leer)
 console.log(gemischt)
 ```
 
+## Iterieren über Arrays
+
+Bei Arrays verwendet man das Keyword **of** um darüber zu Iterieren.
+
+```js {cmd=node}
+
+var summe = 0
+for (var zahl of [1, 2, 3, 5, 7, 11, 13]) {
+  summe += zahl
+}
+
+console.log(summe)
+```
+
+## Auf Elemente zugreifen
+
+```js {cmd=node}
+
+var namen = ['Hans', 'Josephine', 'Joe', 'Tanako']
+
+console.log(namen[0])  // -> Hans
+
+namen[2] = 'Josh'
+console.log(namen)
+```
+
+
 ## Eigenschaften von Arrays
 
 Arrays habe eine _Länge_.
