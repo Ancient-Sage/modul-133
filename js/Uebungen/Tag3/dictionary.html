@@ -8,21 +8,12 @@
 </head>
 <body>
   <h1>Wörterbuch</h1>
-  Deutsch: <input type="text" id="stichwort">
+  Stichwort: <input type="text" id="stichwort">
   <button onclick="uebersetzen()">übersetzen</button>
+  <input type="radio" name="sprache" value="de_fr" checked> de->fr
+  <input type="radio" name="sprache" value="fr_de"> fr->de
   <hr>
-  <span id="uebersetzung"></span>
-
-  <script>
-    var textfield = document.getElementById('stichwort')
-    var outSpan = document.getElementById('uebersetzung')
-
-    // textfield.value: Inhalt des Textfeldes
-    // outSpan.innerHTML = ...  Übersetzung anzeigen
-
-    // Ein Objekt mit den Übersetzungen (10-20 Stichworte)
-
-    // Funktion uebersetzen schreiben
-  </script>
+  Übersetzung: <span id="uebersetzung"></span>
+  <script src="dictionary.js"></script>
 </body>
 </html>
