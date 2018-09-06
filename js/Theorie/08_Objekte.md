@@ -106,8 +106,9 @@ if (person.hobbies.length === 0) {
 
 ### Funktionen in Objekte hinein packen (Methoden)
 
-```js {cmd=node}
+Objekte können auf Funktionen enthalten:
 
+```js {cmd=node}
 var person = {
   nickname: 'tutu',
   jahrgang: 1999,
@@ -124,3 +125,33 @@ person.sagHallo()
 person.sagHallo('Peter')
 console.log(person.sagHallo)
 ```
+
+Mit `this` kann in einer Methode auf das eigene Objekt zugegriffen werden. `this` zeigt immer auf das Objekt, was beim Aufruf direkt _vor_ dem Punkt steht.
+
+```js {cmd=node}
+var person = {
+  name: 'Marie',
+  stellDichVor: function () {
+    //var meinName = person['name']
+    var meinName = this.name
+    //console.log('this:', this)
+    console.log(`Guten Tag. Mein Name ist ${meinName}.`)
+  },
+  hobby: {
+    name: 'Fussball',
+    ausfuehren() {
+      console.log(`${this.name}: Oléolé!`)
+    }
+  }
+}
+
+var vorstellungsFunktion = person.stellDichVor
+
+console.log(vorstellungsFunktion)
+vorstellungsFunktion()  // Achtung, Methode ist entwurzelt!
+
+console.log(person.stellDichVor)
+person.stellDichVor()
+person.hobby.ausfuehren()
+```
+
