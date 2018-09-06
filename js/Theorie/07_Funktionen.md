@@ -47,6 +47,45 @@ console.log('------')
 nichtViel(1)
 ```
 
+## Funktionen rumschieben
+
+Funktionen können in Variablen gespeichert werden.
+```js {cmd=node}
+
+function hi() {
+  console.log('Hi!')
+}
+
+hi()
+
+var hello = hi
+
+hello()
+
+console.log(hi === hello)
+
+var gutenTag = function () {
+  console.log('Guten Tag!')
+}
+
+gutenTag()
+```
+
+### Rückruf-Funktionen (Callbacks)
+
+Funktionen, welche übergeben werden, um später aufgerufen zu werden.
+
+```js {cmd=node}
+function hi() { console.log('Hi!') }
+
+setTimeout(hi, 1000)
+
+setTimeout(function () {
+  console.log('Bye!')
+}, 2000)
+
+```
+
 ## Funktionen die sich selbst aufrufen (Rekursion)
 
 Einfaches Beispiel: Countdown von 10 auf 0.
@@ -66,7 +105,7 @@ countdown(10)
 
 Komplizierteres Beispiel: Arrays sortieren.
 ```js {cmd=node}
-var zahlen = [3, 7, 2, 12, 5, 9, 1]
+var zahlen = [3, 7, 2, 12, 5, 9, 1, 3]
 
 function sort(liste) {
   console.log("*", liste)
@@ -87,8 +126,8 @@ function sort(liste) {
         groesser.push(el)
       }
     }
-
-    return sort(kleiner).concat(gleich, sort(groesser))
+    var result = sort(kleiner).concat(gleich, sort(groesser))
+    return result
   }
 }
 
