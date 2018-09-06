@@ -43,7 +43,7 @@ Elemente eines Objektes können abgerufen, verändert und hinzugefügt werden.
 
 ### Über Objekte iterieren
 
-Bei Objekte verwendet man das Keyword **in** fürs Iterieren. Man erhällt dabei die Stichworte, unter welchen etwas abgespeichert ist.
+Bei Objekte verwendet man das Keyword **in** fürs Iterieren. Man erhält dabei die Stichworte, unter welchen etwas abgespeichert ist.
 
 ```js {cmd=node}
 
