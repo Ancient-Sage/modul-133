@@ -155,3 +155,15 @@ person.stellDichVor()
 person.hobby.ausfuehren()
 ```
 
+#### Kurzform für Methoden
+
+```js {cmd=node}
+var jaSager = {
+  name: 'Kurt',
+  sagJa() {
+    console.log('Ja!')
+  }
+}
+
+jaSager.sagJa()
+```
