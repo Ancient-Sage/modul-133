@@ -103,3 +103,24 @@ if (person.hobbies.length === 0) {
   console.log(`Das Lieblingshobby von ${name} ist ${lieblingsHobby.name}.`)
 }
 ```
+
+### Funktionen in Objekte hinein packen (Methoden)
+
+```js {cmd=node}
+
+var person = {
+  nickname: 'tutu',
+  jahrgang: 1999,
+  sagHallo: function (name) {
+    if (name) {
+      console.log(`Hi ${name}!`)
+    } else {
+      console.log('Hi!')
+    }
+  }
+}
+
+person.sagHallo()
+person.sagHallo('Peter')
+console.log(person.sagHallo)
+```
