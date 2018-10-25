@@ -37,7 +37,7 @@ begruessung(name)
 
 ### Funktion mit mehreren Parametern
 
-Eine Funktion kann beliebig viele Parameter engegen nehmen. Die Parameter sind lokale Variablen innerhalb des Funktionsaufrufs. Die lokalen Variablen sind nur innerhalb des Funktionsaufrufs verfügbar. Ausserhalb existieren sie nicht.
+Eine Funktion kann beliebig viele Parameter entgegen nehmen. Die Parameter sind lokale Variablen innerhalb des Funktionsaufrufes. Die lokalen Variablen sind nur innerhalb des Funktionsaufrufs verfügbar. Ausserhalb existieren sie nicht.
 
 ```js  {cmd=node}
 
@@ -54,11 +54,11 @@ first = 'Supatra'
 last = 'Reber'
 begruessung(first, last)
 
-// console.log(vorname)  vorname existiert als Variable nicht
-// console.log(full_name)
+// console.log(vorname)     vorname existiert als Variable nicht
+// console.log(full_name)   das gleiche gilt für full_name
 ```
 
-### Funktionen mit Rückgabewert
+### Funktion mit Rückgabewert
 
 Ein Funktionsaufruf kann ein Resultat berechnen, und dieses zurück geben. Das Resultat der Berechnung erscheint an der Stelle des ursprünglichen Funktionsaufrufes.
 
@@ -79,7 +79,7 @@ console.log(rueckgabewert)
 
 ### Eingebaute Funktionen
 
-JS enthält zahlreiche vordefinierte Funktionen. Hier zwei Beispiele:
+JS enthält zahlreiche vordefinierte Funktionen. Hier drei Beispiele:
 
 ```js {cmd=node}
 var zweiHochZehn = Math.pow(2, 10)
