@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ordnung muss sein</title>
+  <script>
+    console.log('Head script gestartet');
+
+    function initSeite() {
+      document.getElementById('verb').innerHTML = 'darf'
+    }
+
+    document.addEventListener('DOMContentLoaded', initSeite);
+
+    console.log('Head script beendet')
+  </script>
+  <script src="script1.js"></script>
+</head>
+<body>
+  <h1>Ordnung <span id="verb">muss</span> sein</h1>
+
+  <a href="https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded">Dokumentation zum DOMContentLoaded-Event (MDN)</a>
+
+  <script>
+    console.log('Body script gestartet')
+    console.log('Body script beendet')
+  </script>
+  <script src="script2.js"></script>
+</body>
+</html>
